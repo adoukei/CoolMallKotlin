@@ -21,3 +21,4 @@ local.properties
 /context/
 /.gradle-tmp/
 /AGENTS.md
+/navigation/build/

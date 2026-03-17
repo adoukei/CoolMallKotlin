@@ -29,35 +29,35 @@ android {
     signingConfigs {
         // 通用签名配置
         // 实际使用时请替换为自己的签名文件
-        create("common") {
-            // 哪个签名文件
-            storeFile = file("joker_open_key.keystore")
-            // 密钥别名
-            keyAlias = "joker_open_key"
-            // 密钥密码
-            keyPassword = "joker123456"
-            // 签名文件密码
-            storePassword = "joker123456"
-
-            // 启用所有签名方案以确保最大兼容性
-            enableV1Signing = true  // JAR 签名 (Android 1.0+)
-            enableV2Signing = true  // APK 签名 v2 (Android 7.0+)
-            enableV3Signing = true  // APK 签名 v3 (Android 9.0+)
-            enableV4Signing = true  // APK 签名 v4 (Android 11.0+)
-        }
+//        create("common") {
+//            // 哪个签名文件
+//            storeFile = file("joker_open_key.keystore")
+//            // 密钥别名
+//            keyAlias = "joker_open_key"
+//            // 密钥密码
+//            keyPassword = "joker123456"
+//            // 签名文件密码
+//            storePassword = "joker123456"
+//
+//            // 启用所有签名方案以确保最大兼容性
+//            enableV1Signing = true  // JAR 签名 (Android 1.0+)
+//            enableV2Signing = true  // APK 签名 v2 (Android 7.0+)
+//            enableV3Signing = true  // APK 签名 v3 (Android 9.0+)
+//            enableV4Signing = true  // APK 签名 v4 (Android 11.0+)
+//        }
     }
 
     // 构建类型配置
     buildTypes {
         debug {
             // debug 模式下也使用正式签名配置 - 方便调试支付以及三方登录等功能
-            signingConfig = signingConfigs["common"] // 没有签名请注释掉这行使用默认签名
+//            signingConfig = signingConfigs["common"] // 没有签名请注释掉这行使用默认签名
             // debug 模式下包名后缀
             applicationIdSuffix = ".debug"
         }
 
         release {
-            signingConfig = signingConfigs["common"] // 没有签名请注释掉这行使用默认签名
+//            signingConfig = signingConfigs["common"] // 没有签名请注释掉这行使用默认签名
             // 是否启用代码压缩
             isMinifyEnabled = true
             // 资源压缩
